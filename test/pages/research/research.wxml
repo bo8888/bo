@@ -1,0 +1,68 @@
+
+<view class="res-warp">
+  <view class="{{resing}}"  bindtap="showing">进行中的调查</view>
+  <view class="{{resmore}}" bindtap="showMore">查看更多调查</view>
+</view>
+
+<scroll-view  hidden="{{show1}}">
+<view class="res-box">
+  <text class="res-title">
+   {{save.title}}
+  </text>
+  <view class="res-con">
+ {{save.description}}
+  </view>
+</view>
+<form  bindsubmit="formSubmit">
+<block wx:for="{{save.subtopics}}" >
+<view class="res-item" wx:if="{{item.type==1}}">
+  <text class="res-blueTitle">{{item.priority}}、{{item.title}}</text>
+  <radio-group  bindchange="radioChange" style="padding:0 0rpx;"  name="radio{{item.priority}}">
+   <block wx:for="{{item.voteItems}}">
+    <label class="res-cheack" >
+    <radio value="{{item.id}}" color="#389fcf" name="radio"/>
+    {{item.title}}
+  </label>
+  </block>
+</radio-group>
+</view>
+
+<view class="res-item" wx:if="{{item.type==2}}">
+  <text class="res-blueTitle">{{item.priority}}、{{item.title}}</text>
+  <checkbox-group   style="padding:0 0rpx;" name="checkbox">
+   <block wx:for="{{item.voteItems}}">
+    <label class="res-cheack" >
+    <checkbox  value="{{item.id}}" color="#389fcf" bindchange="checkboxChange" />
+    {{item.title}}
+  </label>
+  </block>
+</checkbox-group>
+</view>
+<view class="res-item" style="padding-bottom:30rpx;" wx:if="{{item.type==3}}">
+  <text class="res-blueTitle">{{item.priority}}、{{item.title}}</text>
+   <input placeholder="在这里填写" bindinput="textChange" class="res-input"/>
+</view>
+</block>
+
+
+
+<view class="res-item" style="padding-bottom:30rpx;">
+ <view class="res-btn">
+   <button class="blue-btn" bindtap="save" formType="submit">提交</button>
+   <button bindtap="getSave" style="margin-bottom:50rpx;">查看投票结果</button>
+   </view>
+</view>
+</form>
+</scroll-view>
+
+<scroll-view hidden="{{show2}}">
+<block wx:for="{{searchList}}">
+<navigator url="../researchContent/researchContent?id={{item.id}}">
+  <view class="more-res">
+     <text class="more-title">{{item.title}}</text>
+      <text class="more-time" wx:if="{{item.startTime!=''}}">[{{item.startTime}}]至[{{item.endTime}}]</text>
+      <image src="../../icons/right-back.png" class="right-back"></image>
+   </view>
+   </navigator>
+   </block>
+</scroll-view>

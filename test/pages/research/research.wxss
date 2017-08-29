@@ -1,0 +1,127 @@
+/* pages/more/more.wxss */
+
+.res-warp{
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+     border-top: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.resing,.resmore{
+     box-sizing: border-box;
+    background-color: #eaeaea;
+     width: 50%;
+     height: 100rpx;
+     line-height: 100rpx;
+     text-align: center;
+     font-size: 30rpx;
+    
+}
+.resmore{
+    background-color: #fafafa;
+     border-left: 1px solid #e0e0e0;
+}
+.res-box{
+     background: white;
+     margin-bottom: 20rpx;
+     padding: 0 30rpx 30rpx 30rpx;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.res-title{
+    text-align: center;
+    font-size: 28rpx;
+    margin-bottom:20rpx; 
+}
+.res-con{
+    text-indent: 55rpx;
+    font-size: 24rpx;
+    color: #a5a5a5;
+    line-height: 30rpx;
+}
+.res-item{
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    padding-top: 30rpx;
+    }
+.res-blueTitle{
+    display: inline-block;
+    padding-top: 30rpx;
+    color: #389fcf;
+    font-size: 26rpx;
+    padding: 0 30rpx;
+}
+.res-list{
+    display: flex;
+    justify-content: space-between;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    padding-left: 70rpx;
+    padding-right: 30rpx;
+    border-bottom: 1px solid #eee;
+}
+.res-list input{
+    margin-top:10rpx;
+
+}
+.res-success{
+
+  padding-top: 10rpx;
+}
+.res-cheack{
+    display: block;
+    border-bottom: 1px solid #eee;
+     
+    height: 80rpx;
+    line-height: 80rpx;
+    
+    padding: 30rpx 30rpx 30rpx 70rpx;
+}
+
+.blue-btn{
+    background-color: #389fcf;
+    color: white;
+    margin-bottom: 18rpx;
+    margin-top: 0rpx;
+}
+.res-btn{
+    padding: 0 30rpx;
+}
+.more-res{
+    padding: 35rpx 30rpx;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+}
+.more-title{
+ font-size: 34rpx;
+
+}
+.more-time{
+    display:block;
+    font-size: 22rpx;
+    color: #a9a9a9;
+    margin-top: 20rpx;
+}
+.right-back{
+    width: 16rpx;
+    height: 25rpx;
+    position: absolute;
+    top:50%;
+    right: 30rpx;
+    margin-top: -12.5rpx;
+}
+.res-input{
+   
+    padding-top: 15rpx;
+     padding-bottom: 15rpx;
+    padding-left: 70rpx;
+   border-bottom: 1px solid #eee;
+   margin-bottom: 20rpx;
+   
+}

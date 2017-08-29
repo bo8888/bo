@@ -1,0 +1,37 @@
+
+<view class="view-postion">
+<view class="news-title">
+ {{videos.title}}
+ <view>
+ <text class="news-ctime">{{videos.releaseDate}}</text>
+ <text class="news-local">本站原创</text>
+ <text class="news-count">{{videos.views}}次浏览</text>
+ </view>
+</view>
+
+
+<view class="news-zw">
+   <view class="videos-play">
+    <video src="{{videos.mediaPath}}" controls ></video>
+    </view> 
+    <view class="content-indent">
+    {{videos.description}}
+  </view>
+</view>
+
+</view>
+
+<view class="pl-bar">
+    <view  class="isay" bindtap="getCommentList">我来说两句</view>
+    <view class="pl-flex"  bindtap="getCommentList">
+      <image src="../../icons/news-pl.png"></image>
+      <text class="conut-22">{{videos.comments}}</text>
+    </view>
+    <view  class="pl-flex" bindtap="up">
+     <image src="{{upsImg}}"></image>
+      <text class="conut-22">{{ups}}</text>
+    </view>
+     <view  class="pl-flex" bindtap="collect">
+     <image src="{{collectImg}}"></image>
+    </view>
+</view>

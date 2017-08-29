@@ -1,0 +1,31 @@
+
+<view class="user-info" bindtap="userLogin">
+  <image src="../../icons/logo.jpg" class="user-logo" wx:if="{{userImg==''}}"></image>
+  <image src="{{userImg}}" class="user-logo" wx:else></image>
+   <view class="user-name">{{userName}}</view>
+   <image src="../../icons/right-back.png" class="r-back"></image>
+</view>
+
+
+
+
+
+
+
+  <navigator url="{{columnData.url}}" hidden="{{flag}}" wx:if="{{thirdAccount!=true}}">
+    <view class="user-item">
+      <image src="{{columnData.iconPath}}" class="user-icon"></image>
+      <text class=".user-column">{{columnData.columnName}}</text>
+    <image src="../../icons/right-back.png" class="r-back"></image>
+    </view>
+    </navigator>
+
+
+
+
+
+<view bindtap="downLogin" hidden="{{flag}}" class="user-item" style="margin-top:30rpx;">
+ <image src="../../icons/downLogin.png" class="user-icon"></image>
+ <text class=".user-column">退出登录</text>
+<image src="../../icons/right-back.png" class="r-back"></image>
+</view>
